@@ -1,0 +1,714 @@
+*{
+  margin: 0;
+  padding: 0;
+  Scroll-behavior : smooth ;
+}
+
+body{
+  font-family:sans-serif,cursive;
+}
+
+header{
+  display:flex;
+  flex-wrap: wrap;
+  position:fixed;
+  top:0;
+  background-color:grey;
+  justify-content:flex-end;
+  width:100%;
+  align-items:center;
+  opacity:0.8;
+}
+
+#nav_bar{
+  float:right;
+  width:30vw;
+  color:white;
+  height:6vh;
+  padding:10px;
+}
+
+#nav_bar>ul{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+li{
+  list-style:none;
+}
+
+li a{
+  color:white;
+}
+
+li :hover{
+  color: black;
+}
+
+/*This is bg1*/
+.bg1{
+  height:100vh;
+  width:100%;
+  background: url(images/homepage_bg1.jpg);
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.bg1>h1{
+  color:white;
+  position: relative;
+  left:100px;
+  line-height: 80px;
+  font-size: 2em;
+  font-family: monospace;
+}
+
+
+/* This is scroll effect*/
+.scroll{
+  position:absolute;
+  top:85%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.875rem;
+  cursor: pointer;
+}
+
+.scroll span{
+  display:block;
+  width:20px;
+  height:20px;
+  border-bottom: 5px solid #fff;
+  border-right: 5px solid #fff;
+  transform:rotate(45deg);
+  margin:-5px;
+  animation: animate 3s infinite;
+
+}
+
+.scroll span:nth-child(1){
+  animation-delay: -0.5s;
+  transform:rotate(45deg) translate(-20px,-20px);
+}
+.scroll span:nth-child(2){
+  animation-delay: -0.4s;
+}
+.scroll span:nth-child(3){
+  animation-delay: -0.3s;
+}
+.scroll span:nth-child(4){
+  animation-delay: -0.2s;
+}
+.scroll span:nth-child(5){
+  animation-delay: -0.1s;
+}
+
+@keyframes animate{
+    0%
+{
+  opacity: 0;
+  transform:rotate(45deg) translate(-20px,-20px);
+}
+  50%
+{
+  opacity:1;
+}
+  100%
+{
+  opacity:0;
+  transform:rotate(45deg) translate(20px,20px);
+    }
+}
+
+/*This is bg2*/
+
+.bg2{
+  background: url(images/homepage_bg2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.about_me{
+  width: 100vw;
+  height:50vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.about_me_info{
+  position: relative;
+  top:50px;
+  left:200px;
+  width:30vw;
+  height:40vh;
+  padding:40px;
+  border: 2px solid black;
+  border-radius: 0px 50px 0px;
+}
+
+.about_me_info h3{
+  font-family:cursive;
+  font-size: 20px;
+  padding:20px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.about_me_info p{
+  line-height: 25px;
+  text-align: justify;
+}
+
+.about_me_img{
+  position: relative;
+  top:80px;
+  left:50px;
+  height:45vh;
+  width: 20vw;
+
+}
+
+.about_me_img img{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.section{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height:15vh;
+  background: #faf9cd;
+  font-size: 1.5em;
+  font-family: cursive;
+}
+
+/*This is bg3 and bg4*/
+
+.bg3{
+  background: url(images/homepage_bg3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bg4{
+  background: url(images/homepage_bg4.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size:cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info{
+  padding:20px;
+  background: #dadce0;
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+
+.info h3{
+  text-align:center;
+  font-size: 20px;
+  padding:20px;
+}
+
+.info p{
+  line-height: 20px;
+}
+
+/*This is hover effect*/
+.container{
+  width:1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 170px;
+  justify-content: space-between;
+}
+
+.box{
+  position:relative;
+  margin: 20px;
+  margin-left: 20px;
+  width:350px;
+  height:400px;
+  background: #000;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: 2px solid #e6e17c;
+  box-shadow: 0 30px 30px rgba(0,0,0,0.5);
+}
+
+.box .imgbox{
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.box .imgbox img{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit: fill;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.box:hover .imgbox img{
+  opacity: 0;
+}
+
+.box .content{
+  position: absolute;
+  bottom: 20px;
+  left:10%;
+  width:80%;
+  height:70px;
+  background: white;
+  transition: 0.5s;
+  overflow: hidden;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.box:hover .content{
+  height: 100%;
+  width:100%;
+  bottom: 0;
+  left: 0;
+  border-radius: 0px;
+  border-radius: 20px;
+}
+
+.box .content h3{
+  margin:0;
+  padding:0;
+  font-size: 15px;
+  text-align: center;
+}
+
+.box .content p{
+  margin: 10px 0 0;
+  padding:0;
+  opacity:0;
+  line-height:1.2em;
+  transition:0.5s;
+  text-align:left;
+  font-size: 15px;
+}
+
+.box:hover .content p{
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+/*This is bg 5*/
+.bg5{
+  background: url(images/homepage_bg5.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.contact_info{
+  position: relative;
+  height:50vh;
+  width:30vw;
+  left:35%;
+  top:20%;
+  background:rgba(255, 255, 255, 0.5);
+  align-items: middle;
+  border-radius: 20px;
+  padding:20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact_info li{
+  padding: 20px;
+  line-height: 20px;
+  font-size: 20px;
+  font-family: cursive;
+}
+
+/*This is icon*/
+
+.iconbox{
+  position:relative;
+  top:35%;
+  right:31%;
+  transform: translateY(-50%);
+  width:100%;
+  text-align:center;
+  display:block;
+}
+
+.btn{
+  display: inline-block;
+  width:90px;
+  height:90px;
+  background: #f1f1f1;
+  margin:10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color:#3948db;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn i{
+  line-height: 90px;
+  font-size: 26px;
+  transition:0.2s;
+}
+
+.btn:hover i{
+  transform: scale(1.5);
+  color:#f1f1f1;
+}
+
+.btn:before{
+  content:"";
+  position:absolute;
+  width:120%;
+  height:120%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn:hover::before{
+  animation: icon 0.7s 1;
+  top:-10%;
+  left:-10%;
+}
+
+@keyframes icon {
+  0%{
+    top: -110%;
+    left: 90%;
+  }
+  50%{
+    top: 10%;
+    left:-30%;
+  }
+  100%{
+    top: -10%;
+    left: -10%;
+  }
+}
+
+footer{
+  background: url(images/footer_img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+footer p{
+  font-size: 25px;
+  color: black;
+  font-family:cursive;
+  padding:10px;
+  line-height: 50px;
+  background:rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+}
+
+
+  @media (max-width:1024px){
+
+    /*This is hover effect*/
+    .container{
+      width:80vw;
+      margin-left: 80px;
+    }
+
+    .box{
+      top:50px;
+      margin: 10px;
+      margin-left: 0px;
+      width:25vw;
+      height:25vh;
+    }
+
+    .box .imgbox{
+      position:absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }
+
+
+    #nav_bar{
+      width:70vw;
+      height:5vh;
+      padding:20px;
+    }
+
+    #nav_bar>ul{
+      padding: 15px;
+    }
+
+    /*This is bg1*/
+    .bg1>h1{
+      left:80px;
+      font-size: 2.2em;
+    }
+
+    /*This is bg2*/
+
+    .about_me{
+      width: 80vw;
+      height:50vh;
+    }
+
+    .about_me_info{
+      top:80px;
+      left:30px;
+      height:35vh;
+      padding:30px;
+    }
+
+    .about_me_img{
+      top:100px;
+      left:60px;
+      height:35vh;
+      width: 40vw;
+    }
+
+
+
+    /*This is bg 5*/
+
+    .contact_info{
+      height:auto;
+      width:80vw;
+      left:10%;
+      top:27%;
+    }
+
+    /*This is icon*/
+
+    .iconbox{
+      right:0%;
+    }
+
+
+    footer{
+      height: 20vh;
+    }
+
+    footer p{
+      font-size: 20px;
+      padding:20px;
+    }
+
+  }
+
+
+
+  @media (max-width:500px) {
+    .bg3{
+      flex-direction: column;
+      align-items:center;
+      height: 80vh;
+    }
+
+    .bg4{
+      flex-direction: column;
+      align-items:center;
+      height: 100vh;
+    }
+
+
+    .info{
+      padding:20px;
+      position: relative;
+      top:0%;
+      width: 65vw;
+    }
+
+    .container{
+      display: none;
+    }
+
+    header{
+      justify-content:space-around;
+    }
+
+    #nav_bar{
+      width:70vw;
+    }
+
+    .bg1{
+      height:100vh;
+      width:100%;
+      background: url(images/homepage_bg1.jpg);
+      background-attachment:fixed;
+      background-repeat: no-repeat;
+      background-position:right;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+    }
+
+    .bg1>h1{
+      line-height: 60px;
+      left:10px;
+      font-size: 2em;
+    }
+
+    .scroll span{
+      width:10px;
+      height:10px;
+      margin:2px;
+    }
+
+    /*This is bg2*/
+
+    .bg2{
+      background:#9de9ed;
+      flex-direction: column ;
+      align-items: center;
+      justify-content: center;
+      padding:0px;
+    }
+
+    .about_me{
+      width: 100vw;
+      height:auto;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items:center;
+    }
+
+    .about_me_info{
+      top:0px;
+      left:0px;
+      width:50vw;
+      height:30vh;
+      padding:10px;
+    }
+
+    .about_me_info h3{
+      font-size: 20px;
+      padding:10px;
+    }
+
+    .about_me_info p{
+      line-height: 15px;
+      text-align:left;
+      font-size: 10px;
+    }
+
+    .about_me_img{
+      top:10px;
+      left:0%;
+      height:30vh;
+      width: 50vw;
+    }
+
+    /*This is bg 5*/
+    .bg5{
+      background: url(images/homepage_bg5.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size:cover;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .contact_info{
+      height:auto;
+      width:50vw;
+      left:10%;
+      top:30%;
+    }
+
+    .contact_info li{
+      padding: 10px;
+      line-height: 15px;
+      font-size: 15px;
+      font-family: cursive;
+    }
+
+    /*This is icon*/
+
+    .iconbox{
+      top:35%;
+      right:0%;
+      display:flex;
+      flex-direction: row;
+    }
+
+    .btn{
+      width:50px;
+      height:50px;
+    }
+
+    .btn i{
+      line-height: 50px;
+    }
+
+    footer{
+      background: url(images/footer_img.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size:cover;
+      height: 25vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    footer p{
+      font-size: 15px;
+      line-height: 30px;
+    }
+    }
